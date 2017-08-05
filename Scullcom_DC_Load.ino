@@ -1,12 +1,12 @@
 //SCULLCOM HOBBY ELECTRONICS
 //ELECTRONIC DC LOAD PROJECT
-//Software Version 27
+//based on Software Version 27 from
 //13th July 2017
 
 #include <SPI.h>                              //include SPI library (Serial Peripheral Interface)
 #include <Wire.h>                             //include I2C library
 
-#ifdef USE_TFT
+#ifdef USE_TFT                                // not implemented yet
  #include "Adafruit_GFX.h"
  #include "Adafruit_ILI9341.h"                // use 128x160 1.4'' SPI TFT from ebay - check if the TFT is 5V, or if you need level converters
 #else
@@ -57,13 +57,13 @@ MCP342x adc = MCP342x(MCP342x_ADDRESS);
 
 MCP79410_Timer timer = MCP79410_Timer(MCP79410_ADDRESS);
 
-//Set the pins on the I2C chip used for LCD connections
-//ADDR,EN,R/W,RS,D4,D5,D6,D7
-LiquidCrystal_I2C lcd(LCD_ADDRESS,2,1,0,4,5,6,7);    
-
 #ifdef USE_TFT
 // Use hardware SPI (on Uno, #13, #12, #11) and the above for CS/DC
  Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC);
+#else
+ //Set the pins on the I2C chip used for LCD connections
+ //ADDR,EN,R/W,RS,D4,D5,D6,D7
+ LiquidCrystal_I2C lcd(LCD_ADDRESS,2,1,0,4,5,6,7);    
 #endif
 
 int temp;                                     //

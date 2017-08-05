@@ -1,15 +1,15 @@
 
 #define VERSION 28
 
-//#define DEBUG
+//#define DEBUG                        // define to enable serial debug output
 
 // use I2C keypad to free up 8 pins
 // additional lib: https://github.com/joeyoung/arduino_keypads/tree/master/Keypad_I2C
 // (i used a cheap PCF8574 module from ebay)
-#define USE_I2C_KEYPAD
+//#define USE_I2C_KEYPAD
 #define KEYPAD_ADDRESS 0x38     //define I2C address of PCF8574 (see other supported chips at github repo above)
 
-// use SPI TFT 128x160 (instead of 2004 I2C LCD)
+// use SPI TFT 128x160 (instead of 2004 I2C LCD) - not implemented yet
 //#define USE_TFT
 //#define TFT_DC 9   // digital pin for DC
 //#define TFT_CS 10  // digital pin for CS
