@@ -369,7 +369,7 @@ if(customKey == 'A' && digitalRead(PIN_ROTSW) == LOW){    //check if Transient M
 
 if (Mode != "BC"){
 
-  if(customKey >= '0' && customKey <= '9'){               //check for keypad number input
+  if(customKey >= '0' && customKey <= '9' && index < 18){               //check for keypad number input
        numbers[index++] = customKey;
        numbers[index] = '\0';
        lcd.setCursor(z,3);                              
