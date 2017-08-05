@@ -14,5 +14,5 @@ To make use of it, change the define in config.h.
 
 The software should be fully backwards compatible.
 
-My intention is to see how to add a nicer colored TFT to this project - therefore the freed pins... :-)
+My intention is to see how to add a nicer colored TFT to this project - therefore the savings of pins and RAM... :-)
 
